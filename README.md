@@ -137,7 +137,7 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 ## 🧪 Testando os Endpoints
 ## 🔌 Endpoints RESTful com Exemplos
 
-### `POST /api/Usuarios`
+## 📌 `POST /api/Usuarios`
 
 ```json
 {
@@ -152,8 +152,17 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 }
 
 ```
+## `https://localhost:7026/swagger/Usuarios/Create`
+![usuarios-create](imagens/usuarios-create.png)
 
-### `POST /api/Abrigos`
+## `https://localhost:7026/swagger/Usuarios`
+![usuarios](imagens/usuarios.png)
+
+## `GET /api/Usuarios` via Swagger
+![usuarios-swagger](imagens/usuarios-swagger.png)
+---
+
+## 📌 `POST /api/Abrigos`
 
 ```json
 {
@@ -165,7 +174,18 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 }
 ```
 
-### `POST /api/Relatos`
+
+## `https://localhost:7026/swagger/Abrigos/Create`
+![abrigos-create](imagens/abrigos-create.png)
+
+## `https://localhost:7026/swagger/Abrigos`
+![abrigos](imagens/abrigos.png)
+
+## `GET /api/Abrigos` via Swagger
+![abrigos-swagger](imagens/abrigos-swagger.png)
+---
+
+## 📌 `POST /api/Relatos`
 
 ```json
 {
@@ -183,7 +203,18 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 }
 ```
 
-### `POST /api/PedidosAjuda`
+
+## `https://localhost:7026/swagger/Relatos/Create`
+![relatos-create](imagens/relatos-create.png)
+
+## `https://localhost:7026/swagger/Relatos`
+![relatos](imagens/relatos.png)
+
+## `GET /api/Relatos` via Swagger
+![relatos-swagger](imagens/relatos-swagger.png)
+---
+
+### 📌 `POST /api/PedidosAjuda`
 
 ```json
 {
@@ -199,7 +230,19 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 }
 ```
 
-### `POST /api/Voluntarios`
+
+## `https://localhost:7026/swagger/PedidosAjuda/Create`
+![pedidos-create](imagens/pedidosajuda-create.png)
+
+## `https://localhost:7026/swagger/PedidosAjuda`
+![pedidos](imagens/pedidosajuda.png)
+
+## `GET /api/PedidosAjuda` via Swagger
+![pedidos-swagger](imagens/pedidosajuda-swagger.png)
+---
+
+
+### 📌 `POST /api/Voluntarios`
 
 ```json
 {
@@ -209,7 +252,17 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 }
 ```
 
-### `POST /api/UsuariosAbrigados`
+## `https://localhost:7026/swagger/Voluntarios/Create`
+![voluntarios-create](imagens/voluntarios-create.png)
+
+## `https://localhost:7026/swagger/Voluntarios`
+![voluntarios](imagens/voluntarios.png)
+
+## `GET /api/Voluntarios` via Swagger
+![voluntarios-swagger](imagens/voluntarios-swagger.png)
+---
+
+### 📌 `POST /api/UsuariosAbrigados`
 
 ```json
 {
@@ -220,7 +273,18 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 }
 ```
 
-### `POST /api/Doacoes`
+
+## `https://localhost:7026/swagger/UsuariosAbrigados/Create`
+![abrigados-create](imagens/usuariosabrigados-create.png)
+
+## `https://localhost:7026/swagger/UsuariosAbrigados`
+![abrigados](imagens/usuariosabrigados.png)
+
+## `GET /api/UsuariosAbrigados` via Swagger
+![abrigados-swagger](imagens/usuariosabrigados-swagger.png)
+---
+
+### 📌 `POST /api/Doacoes`
 
 ```json
 {
@@ -230,3 +294,13 @@ builder.Services.AddControllers().AddJsonOptions(options =>
   "data": "2025-06-07"
 }
 ```
+
+## `https://localhost:7026/swagger/Doacoes/Create`
+![doacoes-create](imagens/doacoes-create.png)
+
+## `https://localhost:7026/swagger/Doacoes`
+![doacoes](imagens/doacoes.png)
+
+## `GET /api/Doacoes` via Swagger
+![doacoes-swagger](imagens/doacoes-swagger.png)
+
