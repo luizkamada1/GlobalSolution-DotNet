@@ -144,9 +144,13 @@ builder.Services.AddControllers().AddJsonOptions(options =>
   "nome": "Ana Souza",
   "email": "ana@email.com",
   "senha": "123",
+  "telefone": "(11)97602-0017",
   "tipoUsuario": "morador",
-  "cidade": "São Paulo"
+  "bairro": "Vila Mariana",
+  "cidade": "São Paulo",
+  "cep": "03731-000"
 }
+
 ```
 
 ### `POST /api/Abrigos`
@@ -171,7 +175,11 @@ builder.Services.AddControllers().AddJsonOptions(options =>
   "dataHora": "2025-06-06T14:00:00",
   "latitude": "-23.5502",
   "longitude": "-46.6333",
-  "cidade": "São Paulo"
+  "cidade": "São Paulo",
+  "endereco": "Rua Alameda Santos 100",
+  "bairro": "Jardins",
+  "cidade": "São Paulo",
+  "midiaUrl": "https://imgur.com/alagamento123"
 }
 ```
 
@@ -182,8 +190,12 @@ builder.Services.AddControllers().AddJsonOptions(options =>
   "idUsuario": 1,
   "descricao": "Família isolada no telhado",
   "dataHora": "2025-06-06T15:30:00",
+  "latitude": "-23.5502",
+  "longitude": "-46.6333",
+  "endereco": "Rua Francisco Damante 954",
+  "bairro": "Vila Londrina",
   "cidade": "São Paulo",
-  "status": "pendente"
+  "status": "Em Andamento"
 }
 ```
 
@@ -203,7 +215,8 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 {
   "idUsuario": 1,
   "idAbrigo": 1,
-  "dataEntrada": "2025-06-05"
+  "dataEntrada": "2025-06-07",
+  "dataSaida": "2025-06-12"
 }
 ```
 
@@ -214,6 +227,6 @@ builder.Services.AddControllers().AddJsonOptions(options =>
   "idVoluntario": 1,
   "tipo": "alimento",
   "quantidade": 15,
-  "data": "2025-06-06"
+  "data": "2025-06-07"
 }
 ```
