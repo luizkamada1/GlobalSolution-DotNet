@@ -18,8 +18,11 @@ namespace globalsolution.Models
         [Required]
         public DateTime DataHora { get; set; }
 
-        public decimal? Latitude { get; set; }
-        public decimal? Longitude { get; set; }
+        [MaxLength(50)]
+        public string? Latitude { get; set; }
+
+        [MaxLength(50)]
+        public string? Longitude { get; set; }
 
         public string? Endereco { get; set; }
 
