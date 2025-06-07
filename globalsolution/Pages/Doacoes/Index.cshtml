@@ -1,0 +1,36 @@
+﻿@page
+@model globalsolution.Pages.Doacoes.IndexModel
+@{
+    ViewData["Title"] = "Doações";
+}
+
+<h1>Lista de Doações</h1>
+
+<a asp-page="Create" class="btn btn-primary">Nova Doação</a>
+
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+            <th>ID Voluntário</th>
+            <th>Tipo</th>
+            <th>Quantidade</th>
+            <th>Data</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ListaDoacoes)
+        {
+            <tr>
+                <td>@item.IdVoluntario</td>
+                <td>@item.Tipo</td>
+                <td>@item.Quantidade</td>
+                <td>@item.Data.ToString("dd/MM/yyyy")</td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Editar</a>
+                    <a asp-page="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Remover</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

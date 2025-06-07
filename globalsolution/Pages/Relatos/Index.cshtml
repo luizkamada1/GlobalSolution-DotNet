@@ -1,0 +1,36 @@
+﻿@page
+@model globalsolution.Pages.Relatos.IndexModel
+@{
+    ViewData["Title"] = "Relatos";
+}
+
+<h1>Lista de Relatos</h1>
+
+<a asp-page="Create" class="btn btn-primary">Novo Relato</a>
+
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+            <th>Tipo</th>
+            <th>Descrição</th>
+            <th>Data</th>
+            <th>Localização</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Relatos)
+        {
+            <tr>
+                <td>@item.TipoRelato</td>
+                <td>@item.Descricao</td>
+                <td>@item.DataHora.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>@item.Latitude, @item.Longitude</td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Editar</a>
+                    <a asp-page="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Remover</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

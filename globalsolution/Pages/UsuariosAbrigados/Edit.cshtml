@@ -1,0 +1,31 @@
+﻿@page
+@model globalsolution.Pages.UsuariosAbrigados.EditModel
+@{
+    ViewData["Title"] = "Editar Registro de Abrigo";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Registro.Id" />
+
+    <div>
+        <label asp-for="Registro.IdUsuario"></label>
+        <input asp-for="Registro.IdUsuario" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Registro.IdAbrigo"></label>
+        <input asp-for="Registro.IdAbrigo" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Registro.DataEntrada"></label>
+        <input asp-for="Registro.DataEntrada" class="form-control" type="date" />
+    </div>
+    <div>
+        <label asp-for="Registro.DataSaida"></label>
+        <input asp-for="Registro.DataSaida" class="form-control" type="date" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+    <div asp-validation-summary="All" class="text-danger mt-2"></div>
+</form>

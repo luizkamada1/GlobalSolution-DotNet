@@ -1,0 +1,30 @@
+﻿@page
+@model globalsolution.Pages.UsuariosAbrigados.CreateModel
+@{
+    ViewData["Title"] = "Novo Registro de Abrigo";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <div>
+        <label asp-for="Registro.IdUsuario"></label>
+        <input asp-for="Registro.IdUsuario" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Registro.IdAbrigo"></label>
+        <input asp-for="Registro.IdAbrigo" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Registro.DataEntrada"></label>
+        <input asp-for="Registro.DataEntrada" class="form-control" type="date" />
+    </div>
+    <div>
+        <label asp-for="Registro.DataSaida"></label>
+        <input asp-for="Registro.DataSaida" class="form-control" type="date" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success">Salvar</button>
+    <div asp-validation-summary="All" class="text-danger mt-2"></div>
+    <partial name="_ValidationScriptsPartial" />
+</form>

@@ -1,0 +1,37 @@
+﻿@page
+@model globalsolution.Pages.Doacoes.EditModel
+@{
+    ViewData["Title"] = "Editar Doação";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Doacao.Id" />
+
+    <div>
+        <label asp-for="Doacao.IdVoluntario"></label>
+        <input asp-for="Doacao.IdVoluntario" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Doacao.Tipo"></label>
+        <select asp-for="Doacao.Tipo" class="form-control">
+            <option value="alimento">Alimento</option>
+            <option value="água">Água</option>
+            <option value="roupa">Roupa</option>
+            <option value="colchão">Colchão</option>
+            <option value="outro">Outro</option>
+        </select>
+    </div>
+    <div>
+        <label asp-for="Doacao.Quantidade"></label>
+        <input asp-for="Doacao.Quantidade" class="form-control" type="number" />
+    </div>
+    <div>
+        <label asp-for="Doacao.Data"></label>
+        <input asp-for="Doacao.Data" class="form-control" type="date" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+    <div asp-validation-summary="All" class="text-danger mt-2"></div>
+</form>

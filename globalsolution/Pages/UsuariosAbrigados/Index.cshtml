@@ -1,0 +1,36 @@
+﻿@page
+@model globalsolution.Pages.UsuariosAbrigados.IndexModel
+@{
+    ViewData["Title"] = "Usuários Abrigados";
+}
+
+<h1>Lista de Usuários Abrigados</h1>
+
+<a asp-page="Create" class="btn btn-primary">Novo Registro</a>
+
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+            <th>ID Usuário</th>
+            <th>ID Abrigo</th>
+            <th>Data de Entrada</th>
+            <th>Data de Saída</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Registros)
+        {
+            <tr>
+                <td>@item.IdUsuario</td>
+                <td>@item.IdAbrigo</td>
+                <td>@item.DataEntrada.ToString("dd/MM/yyyy")</td>
+                <td>@(item.DataSaida?.ToString("dd/MM/yyyy") ?? "-")</td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Editar</a>
+                    <a asp-page="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Remover</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

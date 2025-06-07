@@ -1,0 +1,23 @@
+﻿@page
+@model globalsolution.Pages.PedidosAjuda.DeleteModel
+@{
+    ViewData["Title"] = "Remover Pedido de Ajuda";
+}
+
+<h1>Remover Pedido de Ajuda</h1>
+
+<h4>Tem certeza que deseja excluir este pedido?</h4>
+
+<div>
+    <strong>ID Usuário:</strong> @Model.Pedido.IdUsuario <br />
+    <strong>Descrição:</strong> @Model.Pedido.Descricao <br />
+    <strong>Data:</strong> @Model.Pedido.DataHora.ToString("dd/MM/yyyy HH:mm") <br />
+    <strong>Status:</strong> @Model.Pedido.Status
+</div>
+
+<form method="post">
+    <input type="hidden" asp-for="Pedido.Id" />
+    <br />
+    <button type="submit" class="btn btn-danger">Remover</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancelar</a>
+</form>

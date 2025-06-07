@@ -1,0 +1,22 @@
+﻿@page
+@model globalsolution.Pages.Voluntarios.DeleteModel
+@{
+    ViewData["Title"] = "Remover Voluntário";
+}
+
+<h1>Remover Voluntário</h1>
+
+<h4>Tem certeza que deseja excluir este voluntário?</h4>
+
+<div>
+    <strong>ID Usuário:</strong> @Model.Voluntario.IdUsuario <br />
+    <strong>Especialidade:</strong> @Model.Voluntario.Especialidade <br />
+    <strong>Disponibilidade:</strong> @Model.Voluntario.Disponibilidade
+</div>
+
+<form method="post">
+    <input type="hidden" asp-for="Voluntario.Id" />
+    <br />
+    <button type="submit" class="btn btn-danger">Remover</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancelar</a>
+</form>

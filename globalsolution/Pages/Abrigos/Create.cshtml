@@ -1,0 +1,32 @@
+﻿@page
+@model globalsolution.Pages.Abrigos.CreateModel
+@{
+    ViewData["Title"] = "Novo Abrigo";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <div>
+        <label asp-for="Abrigo.Nome"></label>
+        <input asp-for="Abrigo.Nome" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Abrigo.Endereco"></label>
+        <input asp-for="Abrigo.Endereco" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Abrigo.CapacidadeTotal"></label>
+        <input asp-for="Abrigo.CapacidadeTotal" class="form-control" type="number" />
+    </div>
+    <div>
+        <label asp-for="Abrigo.CapacidadeAtual"></label>
+        <input asp-for="Abrigo.CapacidadeAtual" class="form-control" type="number" />
+    </div>
+    <div>
+        <label asp-for="Abrigo.Recursos"></label>
+        <input asp-for="Abrigo.Recursos" class="form-control" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success">Salvar</button>
+</form>

@@ -1,0 +1,23 @@
+﻿@page
+@model globalsolution.Pages.Abrigos.DeleteModel
+@{
+    ViewData["Title"] = "Remover Abrigo";
+}
+
+<h1>Remover Abrigo</h1>
+
+<h4>Tem certeza que deseja excluir este abrigo?</h4>
+
+<div>
+    <strong>Nome:</strong> @Model.Abrigo.Nome <br />
+    <strong>Endereço:</strong> @Model.Abrigo.Endereco <br />
+    <strong>Capacidade:</strong> @Model.Abrigo.CapacidadeAtual / @Model.Abrigo.CapacidadeTotal <br />
+    <strong>Recursos:</strong> @Model.Abrigo.Recursos
+</div>
+
+<form method="post">
+    <input type="hidden" asp-for="Abrigo.Id" />
+    <br />
+    <button type="submit" class="btn btn-danger">Remover</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancelar</a>
+</form>

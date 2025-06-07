@@ -1,0 +1,54 @@
+﻿@page
+@model globalsolution.Pages.PedidosAjuda.CreateModel
+@{
+    ViewData["Title"] = "Novo Pedido de Ajuda";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <div>
+        <label asp-for="Pedido.IdUsuario"></label>
+        <input asp-for="Pedido.IdUsuario" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Pedido.Descricao"></label>
+        <textarea asp-for="Pedido.Descricao" class="form-control"></textarea>
+    </div>
+    <div>
+        <label asp-for="Pedido.DataHora"></label>
+        <input asp-for="Pedido.DataHora" class="form-control" type="datetime-local" />
+    </div>
+    <div>
+        <label asp-for="Pedido.Latitude"></label>
+        <input asp-for="Pedido.Latitude" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Pedido.Longitude"></label>
+        <input asp-for="Pedido.Longitude" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Pedido.Endereco"></label>
+        <input asp-for="Pedido.Endereco" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Pedido.Bairro"></label>
+        <input asp-for="Pedido.Bairro" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Pedido.Cidade"></label>
+        <input asp-for="Pedido.Cidade" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Pedido.Status"></label>
+        <select asp-for="Pedido.Status" class="form-control">
+            <option value="pendente">Pendente</option>
+            <option value="em andamento">Em Andamento</option>
+            <option value="resolvido">Resolvido</option>
+        </select>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success">Salvar</button>
+    <div asp-validation-summary="All" class="text-danger mt-2"></div>
+    <partial name="_ValidationScriptsPartial" />
+</form>

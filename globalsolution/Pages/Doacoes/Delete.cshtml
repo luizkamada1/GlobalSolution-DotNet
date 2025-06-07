@@ -1,0 +1,23 @@
+﻿@page
+@model globalsolution.Pages.Doacoes.DeleteModel
+@{
+    ViewData["Title"] = "Remover Doação";
+}
+
+<h1>Remover Doação</h1>
+
+<h4>Tem certeza que deseja remover esta doação?</h4>
+
+<div>
+    <strong>ID Voluntário:</strong> @Model.Doacao.IdVoluntario<br />
+    <strong>Tipo:</strong> @Model.Doacao.Tipo<br />
+    <strong>Quantidade:</strong> @Model.Doacao.Quantidade<br />
+    <strong>Data:</strong> @Model.Doacao.Data.ToString("dd/MM/yyyy")
+</div>
+
+<form method="post">
+    <input type="hidden" asp-for="Doacao.Id" />
+    <br />
+    <button type="submit" class="btn btn-danger">Remover</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancelar</a>
+</form>

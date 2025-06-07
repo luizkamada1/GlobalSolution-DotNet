@@ -1,0 +1,34 @@
+﻿@page
+@model globalsolution.Pages.Voluntarios.IndexModel
+@{
+    ViewData["Title"] = "Voluntários";
+}
+
+<h1>Lista de Voluntários</h1>
+
+<a asp-page="Create" class="btn btn-primary">Novo Voluntário</a>
+
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+            <th>ID Usuário</th>
+            <th>Especialidade</th>
+            <th>Disponibilidade</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Voluntarios)
+        {
+            <tr>
+                <td>@item.IdUsuario</td>
+                <td>@item.Especialidade</td>
+                <td>@item.Disponibilidade</td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Editar</a>
+                    <a asp-page="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Remover</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

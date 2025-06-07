@@ -1,0 +1,47 @@
+﻿@page
+@model globalsolution.Pages.Relatos.EditModel
+@{
+    ViewData["Title"] = "Editar Relato";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Relato.Id" />
+
+    <div>
+        <label asp-for="Relato.IdUsuario"></label>
+        <input asp-for="Relato.IdUsuario" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Relato.TipoRelato"></label>
+        <select asp-for="Relato.TipoRelato" class="form-control">
+            <option value="Alagamento">Alagamento</option>
+            <option value="Deslizamento">Deslizamento</option>
+            <option value="Isolamento">Isolamento</option>
+            <option value="Outros">Outros</option>
+        </select>
+    </div>
+    <div>
+        <label asp-for="Relato.Descricao"></label>
+        <textarea asp-for="Relato.Descricao" class="form-control"></textarea>
+    </div>
+    <div>
+        <label asp-for="Relato.DataHora"></label>
+        <input asp-for="Relato.DataHora" class="form-control" type="datetime-local" />
+    </div>
+    <div>
+        <label asp-for="Relato.Latitude"></label>
+        <input asp-for="Relato.Latitude" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Relato.Longitude"></label>
+        <input asp-for="Relato.Longitude" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Relato.MidiaUrl"></label>
+        <input asp-for="Relato.MidiaUrl" class="form-control" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+</form>

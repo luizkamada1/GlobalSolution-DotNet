@@ -1,0 +1,27 @@
+﻿@page
+@model globalsolution.Pages.Voluntarios.CreateModel
+@{
+    ViewData["Title"] = "Novo Voluntário";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <div>
+        <label asp-for="Voluntario.IdUsuario"></label>
+        <input asp-for="Voluntario.IdUsuario" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Voluntario.Especialidade"></label>
+        <input asp-for="Voluntario.Especialidade" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Voluntario.Disponibilidade"></label>
+        <select asp-for="Voluntario.Disponibilidade" class="form-control">
+            <option value="sim">Sim</option>
+            <option value="não">Não</option>
+        </select>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success">Salvar</button>
+</form>

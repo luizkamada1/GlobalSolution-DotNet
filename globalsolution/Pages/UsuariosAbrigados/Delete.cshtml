@@ -1,0 +1,23 @@
+﻿@page
+@model globalsolution.Pages.UsuariosAbrigados.DeleteModel
+@{
+    ViewData["Title"] = "Remover Registro de Abrigo";
+}
+
+<h1>Remover Registro</h1>
+
+<h4>Tem certeza que deseja remover este registro?</h4>
+
+<div>
+    <strong>ID Usuário:</strong> @Model.Registro.IdUsuario<br />
+    <strong>ID Abrigo:</strong> @Model.Registro.IdAbrigo<br />
+    <strong>Data Entrada:</strong> @Model.Registro.DataEntrada.ToString("dd/MM/yyyy")<br />
+    <strong>Data Saída:</strong> @(Model.Registro.DataSaida?.ToString("dd/MM/yyyy") ?? "-")
+</div>
+
+<form method="post">
+    <input type="hidden" asp-for="Registro.Id" />
+    <br />
+    <button type="submit" class="btn btn-danger">Remover</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancelar</a>
+</form>

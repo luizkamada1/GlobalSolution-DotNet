@@ -1,0 +1,29 @@
+﻿@page
+@model globalsolution.Pages.Voluntarios.EditModel
+@{
+    ViewData["Title"] = "Editar Voluntário";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Voluntario.Id" />
+
+    <div>
+        <label asp-for="Voluntario.IdUsuario"></label>
+        <input asp-for="Voluntario.IdUsuario" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Voluntario.Especialidade"></label>
+        <input asp-for="Voluntario.Especialidade" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Voluntario.Disponibilidade"></label>
+        <select asp-for="Voluntario.Disponibilidade" class="form-control">
+            <option value="sim">Sim</option>
+            <option value="não">Não</option>
+        </select>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+</form>

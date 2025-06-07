@@ -1,0 +1,24 @@
+﻿@page
+@model globalsolution.Pages.Relatos.DeleteModel
+@{
+    ViewData["Title"] = "Remover Relato";
+}
+
+<h1>Remover Relato</h1>
+
+<h4>Tem certeza que deseja excluir este relato?</h4>
+
+<div>
+    <strong>Tipo:</strong> @Model.Relato.TipoRelato <br />
+    <strong>Descrição:</strong> @Model.Relato.Descricao <br />
+    <strong>Data:</strong> @Model.Relato.DataHora.ToString("dd/MM/yyyy HH:mm") <br />
+    <strong>Localização:</strong> @Model.Relato.Latitude, @Model.Relato.Longitude <br />
+    <strong>Mídia:</strong> @Model.Relato.MidiaUrl
+</div>
+
+<form method="post">
+    <input type="hidden" asp-for="Relato.Id" />
+    <br />
+    <button type="submit" class="btn btn-danger">Remover</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancelar</a>
+</form>
