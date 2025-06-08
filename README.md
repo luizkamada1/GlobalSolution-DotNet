@@ -153,10 +153,10 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 }
 
 ```
-## `https://localhost:7026/swagger/Usuarios/Create`
+## `https://localhost:7026/Usuarios/Create`
 ![usuarios-create](imagens/usuarios-create.png)
 
-## `https://localhost:7026/swagger/Usuarios`
+## `https://localhost:7026/Usuarios`
 ![usuarios](imagens/usuarios.png)
 
 ## `GET /api/Usuarios` via Swagger
@@ -176,10 +176,10 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 ```
 
 
-## `https://localhost:7026/swagger/Abrigos/Create`
+## `https://localhost:7026/Abrigos/Create`
 ![abrigos-create](imagens/abrigos-create.png)
 
-## `https://localhost:7026/swagger/Abrigos`
+## `https://localhost:7026/Abrigos`
 ![abrigos](imagens/abrigos.png)
 
 ## `GET /api/Abrigos` via Swagger
@@ -205,10 +205,10 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 ```
 
 
-## `https://localhost:7026/swagger/Relatos/Create`
+## `https://localhost:7026/Relatos/Create`
 ![relatos-create](imagens/relatos-create.png)
 
-## `https://localhost:7026/swagger/Relatos`
+## `https://localhost:7026/Relatos`
 ![relatos](imagens/relatos.png)
 
 ## `GET /api/Relatos` via Swagger
@@ -232,10 +232,10 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 ```
 
 
-## `https://localhost:7026/swagger/PedidosAjuda/Create`
+## `https://localhost:7026/PedidosAjuda/Create`
 ![pedidos-create](imagens/pedidosajuda-create.png)
 
-## `https://localhost:7026/swagger/PedidosAjuda`
+## `https://localhost:7026/PedidosAjuda`
 ![pedidos](imagens/pedidosajuda.png)
 
 ## `GET /api/PedidosAjuda` via Swagger
@@ -253,10 +253,10 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 }
 ```
 
-## `https://localhost:7026/swagger/Voluntarios/Create`
+## `https://localhost:7026/Voluntarios/Create`
 ![voluntarios-create](imagens/voluntarios-create.png)
 
-## `https://localhost:7026/swagger/Voluntarios`
+## `https://localhost:7026/Voluntarios`
 ![voluntarios](imagens/voluntarios.png)
 
 ## `GET /api/Voluntarios` via Swagger
@@ -275,10 +275,10 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 ```
 
 
-## `https://localhost:7026/swagger/UsuariosAbrigados/Create`
+## `https://localhost:7026/UsuariosAbrigados/Create`
 ![abrigados-create](imagens/usuariosabrigados-create.png)
 
-## `https://localhost:7026/swagger/UsuariosAbrigados`
+## `https://localhost:7026/UsuariosAbrigados`
 ![abrigados](imagens/usuariosabrigados.png)
 
 ## `GET /api/UsuariosAbrigados` via Swagger
@@ -296,10 +296,10 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 }
 ```
 
-## `https://localhost:7026/swagger/Doacoes/Create`
+## `https://localhost:7026/Doacoes/Create`
 ![doacoes-create](imagens/doacoes-create.png)
 
-## `https://localhost:7026/swagger/Doacoes`
+## `https://localhost:7026/Doacoes`
 ![doacoes](imagens/doacoes.png)
 
 ## `GET /api/Doacoes` via Swagger
