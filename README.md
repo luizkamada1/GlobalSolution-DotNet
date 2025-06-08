@@ -28,7 +28,7 @@ A aplicação foi desenvolvida com **ASP.NET Core + Razor Pages**, conectada a u
 1. **Clone o repositório**:
 
 ```bash
-git clone https://github.com/seuusuario/globalsolution.git
+git clone https://github.com/luizkamada1/GlobalSolution-DotNet.git
 cd globalsolution
 ```
 
