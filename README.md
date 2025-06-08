@@ -85,7 +85,7 @@ USUARIO (1) <------ (N) PEDIDO_AJUDA
 USUARIO (1) <------ (1) VOLUNTARIO (1) ------> (N) DOACAO
 USUARIO (1) <------ (N) USUARIO_ABRIGADO (N) ------> (1) ABRIGO
 ```
-
+![mer](imagens/mer.png)
 ---
 
 ## 🛠️ Etapas de Desenvolvimento
